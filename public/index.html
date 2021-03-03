@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>智能风控系统</title>
+</head>
+<style>
+  @-moz-keyframes spinner-loader {
+    0% {
+      -moz-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -moz-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes spinner-loader {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinner-loader {
+    0% {
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner-loader:not(:required) {
+    -moz-animation: spinner-loader 1500ms infinite linear;
+    -webkit-animation: spinner-loader 1500ms infinite linear;
+    animation: spinner-loader 1500ms infinite linear;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -moz-box-shadow: rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0;
+    -webkit-box-shadow: rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0;
+    box-shadow: rgba(0, 0, 51, 0.3) 1.5em 0 0 0, rgba(0, 0, 51, 0.3) 1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) 0 1.5em 0 0, rgba(0, 0, 51, 0.3) -1.1em 1.1em 0 0, rgba(0, 0, 51, 0.3) -1.5em 0 0 0, rgba(0, 0, 51, 0.3) -1.1em -1.1em 0 0, rgba(0, 0, 51, 0.3) 0 -1.5em 0 0, rgba(0, 0, 51, 0.3) 1.1em -1.1em 0 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 30px;
+    overflow: hidden;
+    text-indent: 100%;
+  }
+
+  #loading-tips {
+    color: #7a7f84;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  #loading {
+    left: 45%;
+    top: 40%;
+    position: absolute;
+    font-size: 20px;
+  }
+
+  #root {
+    visibility: hidden;
+  }
+</style>
+<script>
+  function hideLoading() {
+    document.querySelectorAll('#loading')[0].style.display = 'none';
+    document.querySelectorAll('#root')[0].style.visibility = 'visible';
+  }
+</script>
+<body onload="hideLoading()">
+<div id="loading">
+  <div class="spinner-loader"></div>
+  <div id="loading-tips">加载中...</div>
+</div>
+<div id="root"></div>
+</body>
+</html>

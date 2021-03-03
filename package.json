@@ -1,0 +1,52 @@
+{
+  "name": "finance-web",
+  "version": "1.0.0",
+  "description": "智能风控平台（前端）",
+  "private": true,
+  "scripts": {
+    "start": "icejs start --port 3000",
+    "build": "icejs build --mode prod",
+    "lint": "npm run eslint && npm run stylelint",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\""
+  },
+  "dependencies": {
+    "@alifd/next": "~1.19.x",
+    "@alifd/theme-design-pro": "^0.x",
+    "@types/sortablejs": "^1.10.6",
+    "ahooks": "^2.9.6",
+    "antd": "^4.12.3",
+    "axios": "^0.21.1",
+    "bizcharts": "^4.1.7",
+    "history": "^5.0.0",
+    "lodash.debounce": "^4.0.8",
+    "moment": "^2.24.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "rax": "^1.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-sortablejs": "^5.0.5",
+    "redux": "^4.0.5",
+    "sortablejs": "^1.13.0"
+  },
+  "devDependencies": {
+    "@iceworks/spec": "^1.0.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "eslint": "^6.8.0",
+    "ice.js": "^1.0.0",
+    "stylelint": "^13.2.0"
+  },
+  "ideMode": {
+    "name": "ice-react"
+  },
+  "iceworks": {
+    "type": "react",
+    "adapter": "adapter-react-v3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
